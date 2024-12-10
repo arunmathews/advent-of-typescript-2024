@@ -10,7 +10,7 @@
   "scripts": {
     "clean": "rm -rf node_modules dist .DS_Store ",
     "format": "prettier .",
-    "test": "tsc --noEmit day-*.ts"
+    "test": "tsc --noEmit src/days/day-*.ts"
   },
   "keywords": [],
   "author": "",
