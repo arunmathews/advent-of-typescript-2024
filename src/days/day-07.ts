@@ -1,8 +1,8 @@
 import type { Expect, Equal } from "type-testing";
 
-function createRoute<Route extends string[]>(
+function createRoute<const Route extends string[]>(
   author: string,
-  route: [...Route]
+  route: Route
 ) {
   return {
     author,
