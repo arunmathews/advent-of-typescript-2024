@@ -1,7 +1,9 @@
 import type { Expect, Equal } from "type-testing";
 
 type Excuse<T extends Record<string, string>> = {
-  new (excuses: Record<string, string | string[]>): `${keyof T}: ${T[keyof T]}`;
+  new (
+    excuses: Record<string, string | string[]>
+  ): `${Extract<keyof T, string>}: ${T[keyof T]}`;
 };
 
 const existingExcuses = {
