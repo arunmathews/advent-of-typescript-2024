@@ -1,0 +1,1 @@
+export type StringLength<S extends string> = S extends `${infer First}${infer Rest}` ? StringLength<Rest> extends infer L ? L extends number ? L + 1 : never : never : 0;
